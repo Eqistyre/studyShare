@@ -1,0 +1,13 @@
+version: '2'
+services:
+    studyshare-mariadb:
+        container_name: studyshare-mariadb
+        image: mariadb:10.1.14
+        # volumes:
+        #     - ~/volumes/jhipster/studyShare/mysql/:/var/lib/mysql/
+        environment:
+            - MYSQL_USER=root
+            - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+            - MYSQL_DATABASE=studyshare
+        ports:
+            - 3306:3306
